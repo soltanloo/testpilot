@@ -4,6 +4,7 @@ import { performance } from "perf_hooks";
 import {
   APIFunction,
   Codex,
+  OpenAIModel,
   exploreAPI,
   FunctionDescriptor,
   getDocSnippets,
@@ -150,7 +151,7 @@ if (require.main === module) {
           "Warning: --strictResponses has no effect when not using --responses"
         );
       }
-      model = new Codex(argv.model === "starcoder", { n: argv.numCompletions });
+      model = new OpenAIModel({ n: argv.numCompletions });
     } else {
       model = MockCompletionModel.fromFile(
         argv.responses,
