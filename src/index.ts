@@ -1,4 +1,5 @@
 export { Codex, PostOptions as CodexPostOptions } from "./codex";
+export { OpenAIModel } from './gpt';
 export { ICompletionModel } from "./completionModel";
 export { emptyCoverageSummary, ICoverageSummary } from "./coverage";
 export { getDocSnippets } from "./docSnippets";
