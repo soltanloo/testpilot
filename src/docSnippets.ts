@@ -310,7 +310,7 @@ function removeTrailingComments(snippet: string) {
   let lines = snippet.split("\n");
   while (true) {
     let line = lines.pop() as string;
-    if (line.startsWith("//") || line?.length === 0) {
+    if (!line || line.startsWith("//") || line?.length === 0) {
       break;
     }
   }
